@@ -1,0 +1,337 @@
+/* ===== SERVICES PAGE STYLES ===== */
+
+/* Service Cards */
+.services-grid {
+  margin-top: var(--space-2xl);
+}
+
+.service-card {
+  padding: 0;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+}
+
+.service-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  padding: var(--space-lg);
+}
+
+.service-content h3 {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.service-content > p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.service-features {
+  margin-bottom: var(--space-lg);
+}
+
+.service-features h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-features ul li {
+  padding: var(--space-xs) 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: var(--space-md);
+  line-height: 1.5;
+}
+
+.service-features ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+  font-weight: bold;
+}
+
+.service-pricing {
+  border-top: 1px solid var(--border-glass);
+  padding-top: var(--space-md);
+}
+
+.price-range {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.price-note {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Package Cards */
+.packages-section {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.packages-grid {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.package-card {
+  padding: 0;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glass-hover);
+}
+
+.package-featured {
+  border: 2px solid var(--accent-dark);
+  transform: scale(1.05);
+}
+
+.package-featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.package-badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--accent-dark);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  z-index: 1;
+}
+
+.package-header {
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  text-align: center;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.package-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.package-price {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.package-duration {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.package-features {
+  padding: var(--space-lg);
+}
+
+.package-features h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.package-features h4:first-child {
+  margin-top: 0;
+}
+
+.package-features p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.package-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.package-features ul li {
+  padding: var(--space-xs) 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: var(--space-md);
+  line-height: 1.5;
+}
+
+.package-features ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+  font-weight: bold;
+}
+
+.package-cta {
+  padding: var(--space-lg);
+  border-top: 1px solid var(--border-glass);
+}
+
+.package-cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.package-notes {
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--glass-white-light);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reasons-grid {
+  margin-top: var(--space-2xl);
+}
+
+.reason-card {
+  padding: var(--space-xl);
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.reason-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.reason-card h4 {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.reason-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Services CTA */
+.services-cta {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cta-guarantee {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-glass);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .package-featured {
+    transform: none;
+  }
+  
+  .package-featured:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid,
+  .packages-grid,
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .service-image {
+    height: 200px;
+  }
+  
+  .service-content,
+  .package-features {
+    padding: var(--space-md);
+  }
+  
+  .package-header {
+    padding: var(--space-lg) var(--space-md) var(--space-md);
+  }
+  
+  .package-price {
+    font-size: 2rem;
+  }
+  
+  .reason-card {
+    padding: var(--space-lg);
+  }
+  
+  .reason-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-content {
+    padding: var(--space-md);
+  }
+  
+  .package-header {
+    padding: var(--space-md);
+  }
+  
+  .package-features,
+  .package-cta {
+    padding: var(--space-md);
+  }
+  
+  .package-price {
+    font-size: 1.75rem;
+  }
+  
+  .reason-card {
+    padding: var(--space-md);
+  }
+} 

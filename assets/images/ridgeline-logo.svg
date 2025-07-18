@@ -1,0 +1,27 @@
+<svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain ridgeline shape -->
+  <path d="M10 35 L25 20 L35 25 L50 15 L65 22 L80 18 L95 25 L110 20 L125 30 L140 25 L150 30 V40 H0 V35 Z" 
+        fill="#BFBFBF" opacity="0.8"/>
+  
+  <!-- Secondary mountain layer -->
+  <path d="M0 38 L20 28 L40 32 L60 25 L80 30 L100 27 L120 32 L140 28 L150 32 V40 H0 V38 Z" 
+        fill="#737373" opacity="0.6"/>
+  
+  <!-- Company name -->
+  <text x="12" y="15" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0D0D0D">
+    RIDGELINE
+  </text>
+  
+  <!-- Audio text -->
+  <text x="12" y="28" font-family="Inter, sans-serif" font-size="8" font-weight="400" fill="#404040" letter-spacing="1px">
+    AUDIO
+  </text>
+  
+  <!-- Decorative sound wave element -->
+  <g transform="translate(110, 12)">
+    <circle cx="0" cy="0" r="1.5" fill="#737373"/>
+    <circle cx="6" cy="-2" r="1" fill="#BFBFBF"/>
+    <circle cx="12" cy="1" r="1.2" fill="#737373"/>
+    <circle cx="18" cy="-1" r="0.8" fill="#BFBFBF"/>
+  </g>
+</svg> 

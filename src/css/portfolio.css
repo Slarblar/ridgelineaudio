@@ -1,0 +1,353 @@
+/* ===== PORTFOLIO STYLES ===== */
+
+/* Filter Buttons */
+.portfolio-filter {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  background: var(--glass-white-light);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--glass-white-strong);
+  border-color: var(--accent-dark);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Portfolio Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.portfolio-item {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all var(--transition-normal);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-item.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-glass-hover);
+}
+
+.portfolio-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-lg);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-info h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.portfolio-info p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-sm);
+}
+
+.venue-tag {
+  display: inline-block;
+  background: var(--accent-dark);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Featured Venues */
+.featured-venues {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.venues-grid {
+  margin-top: var(--space-2xl);
+}
+
+.venue-card {
+  padding: var(--space-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.venue-card h4 {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.venue-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.venue-card ul li {
+  padding: var(--space-xs) 0;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.venue-card ul li:last-child {
+  border-bottom: none;
+}
+
+/* Portfolio Testimonials */
+.portfolio-testimonials {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.testimonials-grid {
+  margin-top: var(--space-2xl);
+}
+
+.testimonial-card {
+  padding: var(--space-xl);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.testimonial-content {
+  margin-bottom: var(--space-lg);
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.testimonial-author {
+  border-top: 1px solid var(--border-glass);
+  padding-top: var(--space-md);
+}
+
+.author-info h4 {
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+/* Portfolio CTA */
+.portfolio-cta {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Lightbox Styles (optional enhancement) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: var(--glass-white-strong);
+  border: 1px solid var(--border-glass);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.lightbox-close:hover {
+  background: var(--glass-white);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: var(--space-sm);
+  }
+  
+  .filter-btn {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.9rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .portfolio-image {
+    height: 250px;
+  }
+  
+  .portfolio-overlay {
+    padding: var(--space-md);
+  }
+  
+  .portfolio-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .venues-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .venue-card {
+    padding: var(--space-md);
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-image {
+    height: 200px;
+  }
+  
+  .portfolio-overlay {
+    padding: var(--space-sm);
+  }
+  
+  .venue-card,
+  .testimonial-card {
+    padding: var(--space-md);
+  }
+}
+
+/* Animation for filtering */
+@keyframes filterIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.portfolio-item.filter-in {
+  animation: filterIn 0.5s ease-out;
+} 
