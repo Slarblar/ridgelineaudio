@@ -653,12 +653,12 @@ img:not([src])::after {
   padding: var(--space-2) 0;
   color: var(--color-secondary);
   position: relative;
-  padding-left: var(--space-6);
+  padding-left: 0;
   line-height: 1.5;
 }
 
 .service-content li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
   color: var(--color-accent-primary);

@@ -14,11 +14,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/logos/ridgeline-logomark-01.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
   <!-- Styles -->
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./src/css/navigation.css">
   <link rel="stylesheet" href="./src/css/hero.css">
   <link rel="stylesheet" href="./src/css/animations.css">
+  <link rel="stylesheet" href="./src/css/about.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -26,7 +31,7 @@
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="./" class="brand-link">
-          <img src="./public/logos/ridgeline-logomark-01.svg" alt="Ridgeline Audio Logo" class="brand-logo" width="150" height="50">
+          <img src="/logos/ridgeline-logomark-01.svg?v=2024" alt="Ridgeline Audio Logo" class="brand-logo" width="150" height="50">
         </a>
       </div>
       
@@ -35,7 +40,6 @@
         <a href="./#services" class="nav-link">Services</a>
         <a href="./#packages" class="nav-link">Packages</a>
         <a href="./about.html" class="nav-link active">About</a>
-        <a href="./portfolio.html" class="nav-link">Portfolio</a>
         <a href="./#contact" class="nav-link">Contact</a>
       </div>
       
@@ -52,14 +56,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="page-hero">
-    <div class="hero-background">
-      <img src="./assets/images/jordan-dj-portrait.jpg" alt="Jordan, professional wedding DJ at Utah venue" class="hero-bg-image" loading="eager">
-      <div class="hero-overlay"></div>
-    </div>
-    
-    <div class="container hero-container">
-      <div class="hero-content glass animate-on-scroll">
+  <section class="page-hero" id="home">
+    <div class="hero-content">
+      <div class="hero-glass">
         <h1>Meet Jordan</h1>
         <p class="hero-description">
           Your Utah wedding DJ passionate about creating unforgettable celebrations throughout the Wasatch Front and beyond.
@@ -69,72 +68,45 @@
   </section>
 
   <!-- About Story -->
-  <section id="about" class="section">
+  <section class="about-jordan section">
     <div class="container">
-      <div class="grid grid-2">
-        <div class="about-story animate-on-scroll">
-          <h2>Jordan's Story</h2>
-          <p class="text-lg">
-            Born and raised in Utah, Jordan has always had a deep appreciation for the state's stunning natural beauty 
-            and the special way it serves as a backdrop for life's most important celebrations.
-          </p>
-          
-          <p>
-            What started as a passion for music and entertainment has evolved into a full-service wedding DJ business 
-            dedicated to creating seamless, stress-free celebrations for Utah couples. Jordan understands that your 
-            wedding day is one of the most important days of your life, and he's committed to making sure every 
-            moment is perfect.
-          </p>
-          
-          <p>
-            With over 5 years of experience in the wedding industry and dozens of successful celebrations throughout 
-            the Wasatch Front, Jordan has developed a keen understanding of Utah's unique venue requirements, from 
-            mountain resort power limitations to outdoor ceremony acoustics.
-          </p>
-          
-          <div class="story-highlights">
-            <div class="highlight-item glass-light">
-              <h4>🎵 Music Passion</h4>
-              <p>Lifelong love of music across all genres, ensuring the perfect soundtrack for your celebration</p>
-            </div>
-            
-            <div class="highlight-item glass-light">
-              <h4>🏔️ Utah Native</h4>
-              <p>Born and raised in Utah with intimate knowledge of local venues and their unique requirements</p>
-            </div>
-            
-            <div class="highlight-item glass-light">
-              <h4>💍 Wedding Specialist</h4>
-              <p>Dedicated exclusively to weddings, understanding the flow and emotion of your special day</p>
-            </div>
-          </div>
-        </div>
+      <h1>Meet Jordan</h1>
+      
+      <div class="jordan-story">
+        <h2>Jordan's Story</h2>
         
-        <div class="about-image animate-on-scroll">
-          <div class="image-container glass">
-            <img data-src="./assets/images/jordan-at-wedding.jpg" alt="Jordan setting up equipment at Utah wedding" class="lazy" loading="lazy">
+        <p>Jordan brings a unique blend of technical expertise and creative vision to Utah's wedding entertainment scene. With a background in creative operations and project management, he understands what it takes to execute flawless events where every detail matters.</p>
+        
+        <p>His passion for music and cutting-edge technology led him to invest in professional-grade Pioneer DJ equipment and premium sound systems. Jordan's approach combines technical precision with an ear for reading the room - skills developed through years of managing complex projects and understanding what creates memorable experiences.</p>
+        
+        <p>What sets Jordan apart is his commitment to preparation and attention to detail. Drawing from his professional background in creative operations, he approaches each celebration with the same level of planning and execution that successful businesses demand.</p>
+        
+        <div class="expertise-sections">
+          <div class="expertise-item">
+            <h3>🎵 Music Expertise</h3>
+            <ul>
+              <li>Professional mixing and technical skills</li>
+              <li>Diverse musical knowledge across all genres</li>
+              <li>Understanding of energy flow and crowd dynamics</li>
+            </ul>
           </div>
           
-          <div class="stats-grid grid grid-2">
-            <div class="stat-item glass-light">
-              <div class="stat-number">100+</div>
-              <div class="stat-label">Weddings Completed</div>
-            </div>
-            
-            <div class="stat-item glass-light">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            
-            <div class="stat-item glass-light">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Utah Venues</div>
-            </div>
-            
-            <div class="stat-item glass-light">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Happy Couples</div>
-            </div>
+          <div class="expertise-item">
+            <h3>🎛️ Technical Excellence</h3>
+            <ul>
+              <li>Industry-leading Pioneer DJ equipment</li>
+              <li>Premium Electro-Voice sound systems</li>
+              <li>Professional-grade lighting and laser projection</li>
+            </ul>
+          </div>
+          
+          <div class="expertise-item">
+            <h3>🏔️ Utah Focus</h3>
+            <ul>
+              <li>Born and raised in Utah with deep appreciation for the state's venues</li>
+              <li>Specialized in indoor celebrations throughout the Wasatch Front</li>
+              <li>Understanding of Utah's unique venue requirements and acoustics</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -314,7 +286,7 @@
     <div class="container">
       <div class="footer-content grid grid-3">
         <div class="footer-brand">
-          <img src="./public/logos/ridgeline-logomark-01.svg" alt="Ridgeline Audio Logo" class="footer-logo">
+          <img src="/logos/ridgeline-logomark-01.svg?v=2024" alt="Ridgeline Audio Logo" class="footer-logo">
           <p>Professional wedding DJ and MC services throughout Utah</p>
         </div>
         

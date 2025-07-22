@@ -74,7 +74,7 @@
 }
 
 .brand-logo {
-  height: 40px;
+  height: 32px; /* Reduced from 40px by 20% */
   width: auto;
   transition: all var(--transition-normal);
   filter: drop-shadow(0 2px 4px rgba(var(--shadow-color), 0.1));
@@ -304,7 +304,7 @@ body {
   }
   
   .brand-logo {
-    height: 36px;
+    height: 29px; /* Reduced from 36px by 20% */
   }
   
   body {
@@ -329,7 +329,7 @@ body {
   }
   
   .brand-logo {
-    height: 32px;
+    height: 26px; /* Reduced from 32px by 20% */
   }
 }
 

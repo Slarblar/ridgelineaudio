@@ -1,0 +1,553 @@
+/* ===== ABOUT PAGE - ELEGANT & LUXURIOUS STYLING ===== */
+
+/* About Page - Using Brand Color System */
+/* Colors inherit from main.css variables:
+   --color-primary: #1e293b (slate-800)
+   --color-secondary: #475569 (slate-600) 
+   --color-tertiary: #64748b (slate-500)
+   --color-quaternary: #94a3b8 (slate-400)
+   --color-accent-primary: #6366f1 (indigo-500)
+   --color-accent-secondary: #8b5cf6 (purple-500)
+   --color-surface: #f8fafc (slate-50)
+   --color-background: #fefefe (white)
+*/
+
+/* ===== HERO SECTION - MATCHING HOMEPAGE STYLE ===== */
+.page-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
+  background-image: url('../../assets/images/jordan-dj-portrait.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 140px;
+}
+
+/* Enhanced Background Overlay - Matching Homepage */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+/* Additional Subtle Texture Overlay - Matching Homepage */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 40%),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-bg-image {
+  display: none !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Enhanced Glass Card - Matching Homepage */
+.hero-glass {
+  background: var(--glass-primary);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-16) var(--space-12);
+  box-shadow: 
+    var(--shadow-glass-strong),
+    var(--shadow-inset),
+    0 0 100px rgba(99, 102, 241, 0.08);
+  transition: all var(--transition-slower);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sophisticated Glass Enhancement - Matching Homepage */
+.hero-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-slower);
+}
+
+.hero-glass:hover::before {
+  opacity: 1;
+}
+
+.hero-glass:hover {
+  background: var(--glass-secondary);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 32px 80px rgba(var(--shadow-color), 0.15),
+    0 0 120px rgba(99, 102, 241, 0.12),
+    var(--shadow-inset);
+}
+
+.hero-glass h1 {
+  color: white;
+  margin-bottom: var(--space-6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.04em;
+  position: relative;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-6);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ABOUT JORDAN SECTION - MATCHING HOMEPAGE STYLE ===== */
+.about-jordan {
+  background: var(--color-background);
+  position: relative;
+}
+
+.about-jordan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-jordan .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-jordan h1 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-12);
+}
+
+/* ===== JORDAN'S STORY SECTION - MATCHING HOMEPAGE STYLE ===== */
+.jordan-story {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jordan-story h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.jordan-story p {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-6);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.jordan-story p:first-of-type {
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+}
+
+/* ===== EXPERTISE SECTIONS - MATCHING HOMEPAGE STYLE ===== */
+.expertise-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-16);
+}
+
+.expertise-item {
+  background: var(--glass-primary);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-glass);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary), var(--color-accent-tertiary));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.expertise-item:hover::before {
+  opacity: 1;
+}
+
+.expertise-item:hover {
+  background: var(--glass-secondary);
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-glass-hover);
+  transform: translateY(-4px);
+}
+
+.expertise-item h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.expertise-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-item li {
+  padding: var(--space-2) 0;
+  color: var(--color-secondary);
+  position: relative;
+  padding-left: 0;
+  line-height: 1.5;
+}
+
+.expertise-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+}
+
+/* ===== EQUIPMENT SECTION - MATCHING HOMEPAGE STYLE ===== */
+.equipment-section {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
+  position: relative;
+}
+
+.equipment-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.equipment-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.equipment-card {
+  background: var(--glass-primary);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-glass);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.equipment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary), var(--color-accent-tertiary));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.equipment-card:hover::before {
+  opacity: 1;
+}
+
+.equipment-card:hover {
+  background: var(--glass-secondary);
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--shadow-glass-hover);
+  transform: translateY(-4px);
+}
+
+.equipment-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-6);
+  filter: grayscale(0.2);
+}
+
+.equipment-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.equipment-card p {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-6);
+  line-height: 1.6;
+}
+
+.equipment-card ul li {
+  color: var(--color-secondary);
+}
+
+.equipment-card ul li::before {
+  color: var(--color-accent-primary);
+}
+
+/* ===== PHILOSOPHY SECTION - MATCHING HOMEPAGE STYLE ===== */
+.philosophy-section {
+  background: var(--color-background);
+  position: relative;
+}
+
+.philosophy-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 60% 80%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.philosophy-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-content {
+  background: var(--glass-primary);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-20);
+  box-shadow: var(--shadow-glass-strong);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-content h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
+
+.philosophy-content .text-xl {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-10);
+  line-height: 1.7;
+}
+
+.philosophy-principles {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  margin: var(--space-10) 0;
+  flex-wrap: wrap;
+}
+
+.principle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-tertiary);
+  font-size: 0.875rem;
+}
+
+.principle-item h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.principle-item p {
+  color: var(--color-secondary);
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Remove or simplify credentials section to match homepage - these sections don't exist on homepage */
+
+/* Remove or simplify personal section to match homepage - these sections don't exist on homepage */
+
+/* ===== ABOUT CTA SECTION - MATCHING HOMEPAGE STYLE ===== */
+.about-cta {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
+  position: relative;
+}
+
+.about-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-container {
+  background: var(--glass-primary);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-20);
+  box-shadow: var(--shadow-glass-strong);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-actions {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  margin: var(--space-10) 0;
+  flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE DESIGN - MATCHING HOMEPAGE STYLE ===== */
+@media (max-width: 1024px) {
+  .page-hero {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 70vh;
+    padding-top: 120px;
+  }
+  
+  .hero-glass {
+    padding: var(--space-12) var(--space-8);
+    margin: 0 var(--space-4);
+    max-width: calc(100% - var(--space-8));
+  }
+  
+  .expertise-sections {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .philosophy-principles {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding-top: 100px;
+  }
+  
+  .hero-glass {
+    padding: var(--space-8) var(--space-6);
+    margin: 0 var(--space-3);
+    border-radius: var(--radius-2xl);
+  }
+  
+  .philosophy-content {
+    padding: var(--space-12);
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .expertise-item,
+  .equipment-card,
+  .hero-glass {
+    transition: none;
+  }
+} 

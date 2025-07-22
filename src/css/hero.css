@@ -144,6 +144,72 @@
     var(--shadow-inset);
 }
 
+/* Hero Logo */
+.hero-logo {
+  margin-bottom: var(--space-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.hero-logo-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all var(--transition-slower);
+  animation: logoFadeScale 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+}
+
+.hero-logo-image:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.25)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Performant Logo Entrance Animation */
+@keyframes logoFadeScale {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Alternative stroke-based animation for inline SVGs */
+.hero-logo svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: logoStrokeDraw 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes logoStrokeDraw {
+  0% {
+    stroke-dashoffset: 1000;
+    fill-opacity: 0;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
 /* Modern Typography */
 .hero h1 {
   color: white;
@@ -160,6 +226,19 @@
   margin-bottom: var(--space-8);
   font-weight: var(--font-weight-medium);
   letter-spacing: -0.02em;
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-description {
@@ -170,6 +249,8 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.6s forwards;
 }
 
 /* Enhanced Button Layout */
@@ -179,6 +260,8 @@
   align-items: center;
   gap: var(--space-4);
   margin-bottom: var(--space-12);
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.8s forwards;
 }
 
 /* Modern Feature Pills */
@@ -201,7 +284,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   font-size: 0.875rem;
-  color: var(--color-secondary);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: var(--font-weight-medium);
   transition: all var(--transition-normal);
   position: relative;
@@ -226,7 +309,7 @@
   background: var(--glass-secondary);
   border-color: var(--glass-border-strong);
   transform: translateY(-2px);
-  color: var(--color-primary);
+  color: rgba(255, 255, 255, 1);
   box-shadow: var(--shadow-md);
 }
 
@@ -348,6 +431,10 @@
     padding: var(--space-10) var(--space-6);
   }
   
+  .hero-logo-image {
+    max-height: 140px;
+  }
+  
   .hero-features {
     flex-direction: column;
     align-items: center;
@@ -387,6 +474,10 @@
   
   .hero-sm .hero-glass {
     padding: var(--space-8) var(--space-5);
+  }
+  
+  .hero-logo-image {
+    max-height: 110px;
   }
   
   .hero-buttons {
